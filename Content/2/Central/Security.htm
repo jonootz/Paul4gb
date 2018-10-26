@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Products.Flare,Products.Central" MadCap:lastBlockDepth="10" MadCap:lastHeight="5840" MadCap:lastWidth="641" MadCap:conditionTagExpression="include[Snippets.Snippet1 or Snippets.Snippet3] exclude[Snippets.Snippet2] ">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:conditions="General.OnlineLive,FlareGuides.FlareMadCapCentralIntegrationGuide">
+            <MadCap:keyword term="Security" />
+            <MadCap:keyword term="MadCap Central:security" MadCap:conditions="Products.Flare" />Security and MadCap Central</h1>
+        <h1 class="SingleChapter" MadCap:conditions="Products.ContributorPrintOnly">
+            <MadCap:keyword term="Security" />
+            <MadCap:keyword term="MadCap Central:security" MadCap:conditions="Products.Flare" />Security and MadCap Central</h1>
+        <MadCap:snippetBlock src="../Resources/Snippets/Central/Security1.flsnp" />
+        <p MadCap:conditions="General.Print">This document discusses the following:</p>
+        <MadCap:miniTocProxy MadCap:conditions="General.Print" class="SingleChapterDoc" />
+        <MadCap:pageBreak MadCap:conditions="General.Print" />
+        <h2 MadCap:conditions="General.Print">Data Centers and Disaster Recovery</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="OnlineOnly">
+                <MadCap:dropDownHotspot>Data Centers and Disaster Recovery</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The infrastructure for MadCap Central is hosted by Microsoft Azure, leveraging secured data centers worldwide. These Azure data centers are ISO27001 certified. For details, see <a href="https://www.microsoft.com/en-us/cloud-platform/global-datacenters" target="_blank">https://www.microsoft.com/en-us/cloud-platform/global-datacenters</a>.</p>
+                <p>The primary data center is located in Sacramento, California. A secondary read-only data center is located in Chicago, Illinois.  Additional failover web servers located around the world are also available. In the event of a data center outage, MadCap Software engineers can restore your data when needed, with no interaction needed from the customer.</p>
+                <p> In addition to data stored in the database, the source control provider (Git) has the ability to failover in case of an outage. This is essential in handling mission critical data in the event of a catastrophe.</p>
+                <p>
+                    <img src="../Resources/Images/CentralSecurityDisasterRecovery.jpg" class="MaxWidth100Percent" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.Print">Source Control Provider and Data Storage</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="OnlineOnly">
+                <MadCap:dropDownHotspot>Source Control Provider and Data Storage</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>MadCap Flare projects can be uploaded to Central, thus creating copies of those projects on the cloud. From the cloud versions of your projects, output files can be generated and published. In addition to Flare source and output files, Central hosts many other types of data, including user and team information, task details, communications between individuals, and ancillary file attachments.</p>
+                <p>
+                    <img src="../Resources/Images/CentralSecurityDataStorage.jpg" class="MaxWidth100Percent" />
+                </p>
+                <MadCap:pageBreak MadCap:conditions="General.Print" />
+                <p>When Flare projects are uploaded to a Central license, they are bound by a Git source control connection.</p>
+                <p>The following objectives are important for this relationship:</p>
+                <ul>
+                    <li><span class="SetOffFirstLevel">Easy Access </span>Projects are hosted in the cloud, which means they can be accessed from anywhere.</li>
+                    <li>
+                        <p><span class="SetOffFirstLevel">Security </span>Projects are stored securely in the cloud. Communication between your local desktop and the cloud is over SSH (Secure Socket Shell) and HTTPS (HTTP over SSL). This is an encrypted, secure channel of communication.  Source control data is secured by username, password, and SSH keys.</p>
+                        <p>
+                            <img src="../Resources/Images/log_in_central.png" alt="" title="" class="MaxWidth100Percent" />
+                        </p>
+                    </li>
+                    <li><span class="SetOffFirstLevel">Data Transference </span>Users can synchronize the local and cloud versions of Flare projects after changes are made to files. In addition, you can retrieve files to a local machine whenever necessary. Uploaded projects can be imported and generated output files can be downloaded from Central.</li>
+                    <MadCap:pageBreak MadCap:conditions="General.Print" />
+                    <li><span class="SetOffFirstLevel">Storage </span>MadCap Central stores user data in different ways depending on the nature of the data. Some examples of data storage include encrypted SQL databases, source control repositories (GIT), and Azure blob storage.<ul class="SecondLevel"><li><p>Sensitive data—such as user credentials and company information in the database tier—are stored using encryption to mitigate unauthorized access to data, and ensure your information is stored securely.</p></li><li>The methods of storing data follow industry security standards and offer a highly scalable solution to ever expanding storage management tracking needs.</li><li>If you choose to cancel your subscription, hosted data can be wiped at your discretion.</li></ul></li>
+                    <li><span class="SetOffFirstLevel">Backups </span>All data is backed up daily. All user data in Central database backups are encrypted, transmitted remotely, and stored securely. This helps prevent unauthorized access. </li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.Print">Web Server Hosting and Management</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="OnlineOnly">
+                <MadCap:dropDownHotspot>Web server Hosting and Management</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Every MadCap Central subscription includes access to our highly scalable cloud-based build server. Because MadCap Central is a cloud-based solution, content creators can rapidly generate and publish their content with minimal effort while benefiting from a high level of security, scalability, and durability, something that would otherwise require skilled IT resources to implement. Published output is hosted on a robust, secure, geographically redundant web application server.</p>
+                <p>With that in mind, the following are important considerations:</p>
+                <ul>
+                    <li><span class="SetOffFirstLevel">Reduced Hosting Costs </span>You can host all of your projects within Central and never worry about managing or scaling costly web servers. Whether you have a small, single project or several large projects, you can host and manage all of your content in one place.</li>
+                    <li><span class="SetOffFirstLevel">Automation and Convenience </span>From Central, you generate and publish output with minimal effort. You also have the ability to quickly roll back published outputs when necessary, with the click of a button. Builds can be initiated manually or they can be scheduled. All of this can be done from any device supporting the browser-based interface.</li>
+                    <li><span class="SetOffFirstLevel">Availability and Monitoring </span>Your content is vital to your company, so 24-hour availability of the web server is crucial, as is constant uptime monitoring. All components of MadCap Central are monitored 24 hours a day, 7 days a week, 365 days a year using remote monitoring systems. MadCap Software has staff on hand to respond to outages and security breaches.</li>
+                    <li><span class="SetOffFirstLevel">Security Management </span>Data in MadCap Central is secured in the following ways:<ul class="SecondLevel"><li>Web services have built-in load balancers to stave off most DOS (Denial-Of-Service) attacks.</li><li>We provide unauthorized access monitoring and incident response. Any breaches in data security will be reported to affected customers.</li><li>User portal and API endpoints (i.e., the connection between Flare and Central) are secured via user authentication.</li><li>All data endpoints are secured using SSL. The user portal, API endpoints, source control provider (Git), and all backend system communications are all encrypted.</li><li>Published builds that are not set to “Live” are secured by user authentication.</li></ul></li>
+                    <MadCap:pageBreak MadCap:conditions="General.Print" />
+                    <li>
+                        <p><span class="SetOffFirstLevel">Scalability </span>As your content management needs grow, so will your demands for a system that dynamically scales as well. Over time, the builds that you generate on Central will consume more and more space. Central offers ease with scalability for your output, which helps to eliminate worries about CPU, memory, and disk-intensive projects.</p>
+                        <p>
+                            <img src="../Resources/Images/CentralSecurityScalable.jpg" class="MaxWidth100Percent" />
+                        </p>
+                    </li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.Print">Service Level Agreement</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="OnlineOnly">
+                <MadCap:dropDownHotspot>Service Level Agreement</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Service Level Agreement (SLA) for hosted output on MadCap Central is 99.97%. This monthly uptime percentage applies to the total guaranteed availability of your output and the systems (storage and web applications) used to host it. This SLA is guaranteed through Microsoft Azure.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.Print">Application and Browser</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="OnlineOnly">
+                <MadCap:dropDownHotspot>Application and Browser</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody class="Final">
+                <p>Much of the work in MadCap Central (e.g., management of users, teams, tasks, projects, and builds) requires user interactions to be performed through a browser. In addition to Flare requiring end-to-end encryption, all traffic from your web browser to the MadCap Central portal is also secured using industry standard security practices such as SSL.</p>
+                <p>
+                    <img src="../Resources/Images/CentralSecurityBrowser.jpg" class="MaxWidth100Percent" />
+                </p>
+                <MadCap:pageBreak MadCap:conditions="General.Print" />
+                <p>Following are some of the notable features in Central that contribute to a secure, accessible work experience:</p>
+                <ul>
+                    <li>
+                        <p><span class="SetOffFirstLevel">Permissions </span>In Central, permissions allow you to dictate which users can see certain information and perform a variety of functions. In addition to basic permissions, there are several administrator-level rights that can be set, giving you the most flexibility to control how your data and files are being managed and distributed.<MadCap:conditionalText MadCap:conditions="Products.CentralOnlineOnly"> See <MadCap:xref href="../Users/Setting_Permissions.htm">Setting User Permissions</MadCap:xref>.</MadCap:conditionalText></p>
+                        <p>
+                            <img src="../Resources/Images/permissions1.png" alt="" title="" class="MaxWidth80Percent" />
+                        </p>
+                    </li>
+                    <li><span class="SetOffFirstLevel">Importing Projects </span>
+                        <MadCap:snippetText src="../Resources/Snippets/Projects/ImportingProjectsCentral.flsnp" />
+                        <MadCap:conditionalText MadCap:conditions="Products.CentralOnlineOnly"> See <MadCap:xref href="../Projects/Importing_Projects.htm">Importing Projects</MadCap:xref>.</MadCap:conditionalText>
+                    </li>
+                    <li><span class="SetOffFirstLevel">Downloading Builds </span>
+                        <MadCap:snippetText src="../Resources/Snippets/Projects/DownloadingBuilds.flsnp" />
+                        <MadCap:conditionalText MadCap:conditions="Products.CentralOnlineOnly"> See <MadCap:xref href="../Projects/Downloading_Builds.htm">Downloading Builds</MadCap:xref>.</MadCap:conditionalText>
+                    </li>
+                    <li>
+                        <p><span class="SetOffFirstLevel">Purchasing Seats and Space </span>Built-in widgets inform you when space or user count becomes a concern. <MadCap:snippetText src="../Resources/Snippets/Server/server4.flsnp" /><MadCap:conditionalText MadCap:conditions="Products.CentralOnlineOnly"> See <MadCap:xref href="../Server/Purchasing_Seats_Space.htm">Purchasing User Seats and Storage Space</MadCap:xref>.</MadCap:conditionalText></p>
+                        <p>
+                            <img src="../Resources/Images/storage_and_usage_widget.png" alt="" title="" class="MaxWidth100Percent" />
+                        </p>
+                    </li>
+                    <MadCap:pageBreak MadCap:conditions="General.Print" />
+                    <li>
+                        <p><span class="SetOffFirstLevel">Single-bound and Dual-bound Projects </span>
+                            <MadCap:snippetText src="../Resources/Snippets/SourceControl/SourceControlCentral1.flsnp" />&#160;<MadCap:snippetText src="../Resources/Snippets/SourceControl/SourceControlCentral2.flsnp" MadCap:conditionTagExpression="exclude[Snippets.Snippet22] " /><MadCap:conditionalText MadCap:conditions="Products.CentralOnlineOnly"> See <MadCap:xref href="../Projects/Source_Control_and_MadCap_Central.htm#SingleBoundOnline">Single-bound Projects</MadCap:xref> and <MadCap:xref href="../Projects/Source_Control_and_MadCap_Central.htm#DualBoundOnline">Dual-bound Projects</MadCap:xref>.</MadCap:conditionalText></p>
+                        <p>
+                            <img src="../Resources/Images/SingleBoundDiagram.jpg" class="MaxWidth80Percent" />
+                        </p>
+                        <p>
+                            <img src="../Resources/Images/DualBoundDiagram.jpg" class="MaxWidth80Percent" />
+                        </p>
+                    </li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

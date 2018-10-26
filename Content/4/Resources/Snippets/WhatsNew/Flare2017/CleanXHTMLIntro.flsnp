@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Products.Flare">
+    <body>
+        <p>A new output type called “<MadCap:variable name="Outputs.CleanXHTML" />” is now available.<MadCap:conditionalText MadCap:conditions="General.OnlineLive"> See <MadCap:xref href="../../../../Output/Determining_the_Output_Type.htm">Determining the Output Type</MadCap:xref> and <MadCap:xref href="../../../../Targets/Adding_Targets.htm">Adding Targets</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>

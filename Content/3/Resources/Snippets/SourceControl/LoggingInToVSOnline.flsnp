@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Products.Flare">
+    <body>When you use Visual Studio Online with Flare, you will be prompted to log in to Visual Studio Online via a dialog in Flare. Your login credentials are stored in a cookie in the Internet Explorer Temporary Internet Files folder (C:\Users\[username]\AppData\Local\Microsoft\Windows\INetCache). When this cookie expires, you will logged out of Visual Studio Online, and Flare will prompt you to log in again.</body>
+</html>

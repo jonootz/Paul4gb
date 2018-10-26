@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Products.Flare">
+    <body>
+        <p>In previous versions of Flare, you would need to manually change the labels for a table of contents (TOC) entry when you edited the title of its linked topic. If you forgot to make changes to the TOC&#160;entry, you would end up with topic titles that were inconsistent with the entry in the TOC. Starting in this version of Flare, you can use new system variables to ensure that your TOC entries are always in sync with your topic titles.<MadCap:conditionalText MadCap:conditions="General.OnlineLive"> See <MadCap:xref href="../../../../Variables/About_Variables.htm">About Variables</MadCap:xref> and <MadCap:xref href="../../../../TOCs/Creating_a_TOC_Manually.htm">Creating a TOC Manually</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>
